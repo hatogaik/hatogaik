@@ -46,7 +46,7 @@ length(vec3)
 
 # edges: c(4,3,2,1) => c(4,1)
 
-# write a function call                          ed edges that takes an argument  called vec and returns a new vector
+# write a function called edges that takes an argument  called vec and returns a new vector
 # composed of the first and last element
 
 edges <- function(a){
@@ -160,11 +160,105 @@ analyze <- function(data2){
   
 }
 
-analyze(inf_data)
+### for loop
+
+for (i in 1:10) {
+  
+  print(i)
+  
+}
+
+for (i in 1:10) {
+  print("a")
+}
+
+sentence <- c("Let","the","computer","do","the","work")
+sentence <- c("this","is","shorter")
+print(sentence[1])
+print(sentence[2])
+print(sentence[3])
+print(sentence[4])
+print(sentence[5])
+print(sentence[6])
 
 
+for (word in sentence) {
+  print(word)
+  
+}
 
 
+colors <- c("blue","red","green","yellow")
+
+for (col in colors) {
+  print(paste("My favorite color is", col))
+  
+}
 
 
+my_length <- function(vec){
+  len <- 0
+  for (element in vec) {
+    
+    len <- len + 1
+  }
+  return(len)
+}
 
+test_vec <- c("a","e","i","o","u")
+
+my_length(test_vec)
+
+
+## write a function called my_sum that takes a vector of numbers and reterns the sum 
+## eg c(1,2,3) => 6
+## eg c(2,2,3,3) => 10
+
+
+my_sum <- function(my_vector){
+  
+  total <- 0
+  for (element in my_vector) {
+    
+    total <- total + element
+  }  # end loop
+  return(total)
+} # end function
+
+a <- c(1,3,4,7)
+my_sum(a)
+
+b <- c(1,1,1)
+my_sum(b)
+
+my_sum <- function(my_vector){
+  
+  total <- 0
+  for (element in my_vector) {
+    
+    total <- total + element
+    print(paste("Total:",total))
+    print(paste("Element:", element))
+  }  # end loop
+  return(total)
+} # end function
+
+my_sum(a)
+
+
+####
+file_path <- "/home/nwknoblauch/Public/r-novice-inflammation/data/inflammation-01.csv"
+
+file_path <- "/home/nwknoblauch/Public/r-novice-inflammation/data/inflammation-"
+
+for (i in 1:9) {
+   
+  current_file <- paste0(file_path, "0", i, ".csv")
+  
+  data <- read.csv(current_file, header = FALSE)
+  
+  analyze(data)
+  
+}
+
+analyze("character")
