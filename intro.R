@@ -102,7 +102,7 @@ min(day_3_no_ones)
 is_one <- day_3 == 1
 day_5 <- inf_data$V5
 day_5[is_one]
-day_5_day_3_one <- day_5[is_one]
+day_5_day_3_one <- day_5[is_one]??plot
 max(day_5_day_3_one)
 inf_data[day_3 == 1, ]
 
@@ -145,3 +145,18 @@ write.csv(car_data, "./data/car_data.csv",
 ?write.csv
 ?plot
 ??plot
+
+##review_lunch time
+# car speed comparison
+car_speed2 <- car_data$Speed
+car_color2 <- car_data$Color
+mean(car_speed2[car_color2 == "Red"])
+
+car_data$Color == "Blue"
+mean(car_data$Speed[car_data$Color == "Blue"])
+mean(car_data$Speed[car_data$Color == "Blue"]) - mean(car_data$Speed[car_data$Color == "Red"])
+mean(car_data$Speed[car_data$Color == "Blue"]) > mean(car_data$Speed[car_data$Color == "Red"])
+
+# row and column
+
+extract <- car_data[c(1,3,4),c(3)]
