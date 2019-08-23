@@ -51,7 +51,7 @@ max(car_data$Speed) - min(car_data$Speed)
 max_speed <- max(car_data$Speed)
 car_data[car_data$Speed == max_speed, ]
 
-
+car_data[car_data$Speed == max_speed,]
 
 
 
